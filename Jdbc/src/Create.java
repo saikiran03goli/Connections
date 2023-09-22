@@ -9,7 +9,9 @@ public class Create {
 			Class.forName("oracle.jdbc.driver.OracleDriver");
 			Connection con=DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:xe","ojava","ojava");
 			Statement stmt=con.createStatement();
+
 			int i=stmt.executeUpdate("create table Example(id number(10),name varchar2(30),address varchar2(30))");
+
 			System.out.println("Table Created");
 			con.close();
 		}
