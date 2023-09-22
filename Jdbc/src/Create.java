@@ -10,8 +10,10 @@ public class Create {
 			Connection con=DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:xe","ojava","ojava");
 			Statement stmt=con.createStatement();
 
-			int i=stmt.executeUpdate("create table Example(id number(10),name varchar2(30),address varchar2(30),salry varchar2(30))");
 
+			int i=stmt.executeUpdate("create table Example(id number(10),name varchar2(30),address varchar2(30) , salary number(10,2))");
+
+		
 			System.out.println("Table Created");
 			con.close();
 		}
